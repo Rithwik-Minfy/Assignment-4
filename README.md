@@ -27,9 +27,7 @@ npx husky install
 Then add this to package.json scripts.
 
 "scripts": {
-
   "prepare": "husky install"
-  
 }
 
 Add Pre-Commit Hook
@@ -39,17 +37,11 @@ npx husky add .husky/pre-commit "npx lint-staged"
 Configure lint-staged in package.json
 
 "lint-staged": {
-
   "*.js": [
-  
     "eslint --fix",
-    
     "prettier --write",
-    
-    "git add"
-    
+    "git add" 
   ]
-  
 }
 
 Set Up ESLint
